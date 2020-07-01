@@ -90,7 +90,7 @@ class CreateOrder
             ]);
             $this->saveBasket($order);
 
-            Notification::route('mail', $order->email)->notify(new OrderCreateForUser($order, $this->priceFormatter));
+            //Notification::route('mail', $order->email)->notify(new OrderCreateForUser($order, $this->priceFormatter));
 
             \DB::commit();
 
