@@ -5,7 +5,7 @@
 use App\Models\Product;
 use Faker\Generator as Faker;
 
-$factory->define(Product::class, function (Faker $faker) {
+$factory->define(App\Models\Product::class, function (Faker\Generator\Faker $faker) {
     return [
         'img'         => $faker->imageUrl(400, 400),
         'title'       => implode(' ', $faker->words(2)),

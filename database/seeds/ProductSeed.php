@@ -11,7 +11,7 @@ class ProductSeed extends Seeder
      */
     public function run()
     {
-        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+            \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         \App\Models\Product::truncate();
         $pizza = [
             [
@@ -72,7 +72,7 @@ class ProductSeed extends Seeder
             ]
         ];
         foreach ($pizza as $item){
-            factory(App\Models\Product::class)->create($item);
+            App\Models\Product::create($item);
         }
         \DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
